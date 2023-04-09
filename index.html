@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> exercise 1 </title>
+</head>
+<body>
+<h1>Exercise 1 - Karin Grinshtein</h1>
+  <input id="number1">
+  <select id="options">
+    <option value = "add">+</option>
+    <option value = "minus">-</option>
+    <option value = "mult">*</option>
+  </select>
+  <input id="number2">
+  <button onclick="getElementById('showResult').innerHTML=calculate()">=</button>
+  <br>
+  <script>
+    function calculate() {
+      let number1 = document.getElementById("number1").value;
+      let number2 = document.getElementById("number2").value;
+      let calculatingOption = document.getElementById("options").value;
+      let result = 0;
+      switch (calculatingOption) {
+        case "add":
+          result = (parseInt(number1 )+ parseInt(number2));
+          break;
+        case "minus":
+          result = number1 - number2;
+          break;
+        case "mult":
+          result = number1 * number2;
+          break;
+      }
+      return result;
+    }
+  </script>
+  <h3>The result is:</h3>
+  <p id = "showResult"></p>
+  <img src="https://i.ytimg.com/vi/2B3UQx6TabU/maxresdefault.jpg" alt="Math is fun" width="300" style="padding-left: 600px">
+</body>
+</html>
